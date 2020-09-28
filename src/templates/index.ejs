@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Template padrão HTML TO PDF</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+
+                padding: 0;
+                margin: 0;
+            }
+
+            h1 {
+                color: #28733d;
+                font-size: large;
+            }
+
+            table {
+                background-color: #fafafa;
+                width: 100%;
+            }
+
+            thead {
+                background-color: #28733d;
+                color: #fafafa;
+            }
+
+            td {
+                font-size: small;
+                border-bottom: 1px solid #bdbdbd;
+                display: flex;
+                justify-content: center;
+            }
+
+            th {
+                border: 0;
+                width: auto;
+                font-size: medium;
+            }
+
+            span {
+                margin-top: 14px;
+                font-size: x-small;
+            }
+
+            img {
+                position: relative;
+                float: right;
+                margin-bottom: 24px;
+            }
+
+            header {
+                width: 100%;
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img
+                src="http://localhost:3000/img/logo-noordhen.png"
+                alt="noordhen logo"
+                width="64px"
+            />
+            <h1>Relatório Logs de documentos</h1>
+        </header>
+
+        <%- children %>
+
+        <span><%= date %></span>
+    </body>
+</html>
